@@ -1,16 +1,23 @@
 import random
 word_list = ["aardvark", "baboon", "camel"]
 
-# TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
 chosen_word = random.choice(word_list)
 print(chosen_word)
-# TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-user_guess = input("Guess the letter")
-guess = user_guess.lower()
-print(guess)
-# TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if it
-#  is, "Wrong" if it's not.
-if guess in chosen_word:
-    print("Right")
-else:
-    print("Wrong")
+placeholder = ""
+length_chosen_word = len(chosen_word)
+for letters in range(length_chosen_word):
+    placeholder += "-"
+print(placeholder)
+
+# TODO-1: Create a "placeholder" with the same number of blanks as the chosen_word
+
+guess = input("Guess a letter: ").lower()
+
+# TODO-2: Create a "display" that puts the guess letter in the right positions and _ in the rest of the string.
+
+for letter in chosen_word:
+    if letter == guess:
+        print("Right")
+    else:
+        print("Wrong")
+

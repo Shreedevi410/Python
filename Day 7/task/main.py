@@ -25,3 +25,7 @@ for letter in chosen_word:
         display += "_"
 
 print(display)
+
+if "_" not in display:
+    game_over = True
+    print("You win.")

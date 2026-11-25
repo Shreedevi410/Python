@@ -20,4 +20,4 @@ travel_log = {
    },
 }
 
-print(travel_log["Germany[cities_visited][2]"])
+print(travel_log["Germany"]["cities_visited"][2])
